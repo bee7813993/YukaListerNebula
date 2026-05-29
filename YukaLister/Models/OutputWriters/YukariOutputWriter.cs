@@ -120,7 +120,7 @@ namespace YukaLister.Models.OutputWriters
 				return null;
 			}
 
-			return "<?php empty($yukarisearchlink) ? print \"" + fileName + "\" : print \"<a href=\\\"\".$yukarisearchlink.\"" + HttpUtility.UrlEncode(fileName)
+			return "<?php empty($yukarisearchlink) ? print \"" + fileName + "\" : print \"<a href=\\\"\".$yukarisearchlink.\"." + HttpUtility.UrlEncode(fileName)
 					+ "\\\">" + fileName + "</a>\";?>";
 		}
 

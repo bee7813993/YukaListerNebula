@@ -41,13 +41,18 @@
 
   <ItemGroup>
     <Compile Include="..\..\..\_Common\CsvManager.cs" Link="_Common\CsvManager.cs" />
+    <Compile Include="..\..\..\_Common\DatabaseCommon.cs" Link="_Common\DatabaseCommon.cs" />
     <Compile Include="..\..\..\_Common\Downloader.cs" Link="_Common\Downloader.cs" />
     <Compile Include="..\..\..\_Common\JsonManager.cs" Link="_Common\JsonManager.cs" />
     <Compile Include="..\..\..\_Common\JulianDay.cs" Link="_Common\JulianDay.cs" />
+    <Compile Include="..\..\..\_Common\PropertyRecord.cs" Link="_Common\PropertyRecord.cs" />
+    <Compile Include="..\..\..\_Common\RecentPathManager.cs" Link="_Common\RecentPathManager.cs" />
     <Compile Include="..\..\..\_Common\RubyReconverter.cs" Link="_Common\RubyReconverter.cs" />
     <Compile Include="..\..\..\_Common\SerilogUtils.cs" Link="_Common\SerilogUtils.cs" />
     <Compile Include="..\..\..\_Common\ShintaCommon.cs" Link="_Common\ShintaCommon.cs" />
     <Compile Include="..\..\..\_Common\ShintaCommonWindows.cs" Link="_Common\ShintaCommonWindows.cs" />
+    <Compile Include="..\..\..\_Common\StringUtils.cs" Link="_Common\StringUtils.cs" />
+    <Compile Include="..\..\..\_Common\SystemEnvironment.cs" Link="_Common\SystemEnvironment.cs" />
     <Compile Include="..\..\..\_Common\WindowsApi.cs" Link="_Common\WindowsApi.cs" />
     <Compile Include="..\..\..\_Common\Wpf\Behaviors\DataGridBindingSupportBehavior.cs" Link="_Common\Wpf\Behaviors\DataGridBindingSupportBehavior.cs" />
     <Compile Include="..\..\..\_Common\Wpf\Behaviors\DeviceChangeAttachedBehavior.cs" Link="_Common\Wpf\Behaviors\DeviceChangeAttachedBehavior.cs" />
@@ -143,7 +148,7 @@
     <None Update="Documents\SampleFolderSettings\BBBさんの例\ゲーム\*.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Documents\SampleFolderSettings\BBBさんの例\特撮\*.mp4">
+    <None Update="Documents\SampleFolderSettings\BBBさんの例\特撒\*.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Documents\SampleFolderSettings\CCCさんの例\*.config">
