@@ -53,7 +53,7 @@ namespace YukaLister.Models.OutputWriters
 					+ "?>\n";
 			_additionalNavi = "<div class=\"additionalnavi\">"
 					+ "<a class=\"additionalnavilink\" href=\"/search.php" + listLinkArg + "\">検索</a> "
-					+ "<a class=\"additionalnavilink\" href=\"/requestlist_only.php" + listLinkArg + "\">予約一覧</a> "
+					+ "<a class=\"additionalnavilink\" href=\"/requestlist_top.php" + listLinkArg + "\">予約一覧</a> "
 					+ "</div>";
 			_listLinkArg = listLinkArg;
 		}
