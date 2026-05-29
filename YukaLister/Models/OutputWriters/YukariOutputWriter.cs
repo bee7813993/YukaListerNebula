@@ -1,4 +1,4 @@
-﻿// ============================================================================
+// ============================================================================
 // 
 // ゆかり用リスト出力クラス
 // 
@@ -53,7 +53,7 @@ namespace YukaLister.Models.OutputWriters
 					+ "?>\n";
 			_additionalNavi = "<div class=\"additionalnavi\">"
 					+ "<a class=\"additionalnavilink\" href=\"/search.php" + listLinkArg + "\">検索</a> "
-					+ "<a class=\"additionalnavilink\" href=\"/requestlist_only.php" + listLinkArg + "\">予約一覧</a> "
+					+ "<a class=\"additionalnavilink\" href=\"/requestlist_top.php" + listLinkArg + "\">予約一覧</a> "
 					+ "</div>";
 			_listLinkArg = listLinkArg;
 		}
@@ -120,7 +120,7 @@ namespace YukaLister.Models.OutputWriters
 				return null;
 			}
 
-			return "<?php empty($yukarisearchlink) ? print \"" + fileName + "\" : print \"<a href=\\\"\".$yukarisearchlink.\"" + HttpUtility.UrlEncode(fileName)
+			return "<?php empty($yukarisearchlink) ? print \"" + fileName + "\" : print \"<a href=\\\"\".$yukarisearchlink.\"." + HttpUtility.UrlEncode(fileName)
 					+ "\\\">" + fileName + "</a>\";?>";
 		}
 
