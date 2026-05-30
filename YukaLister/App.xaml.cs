@@ -41,6 +41,9 @@ namespace YukaLister
 		// --------------------------------------------------------------------
 		private void Application_Startup(object sender, StartupEventArgs e)
 		{
+			// プロセス優先度を通常以下に設定
+			Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.BelowNormal;
+
 			// Livet コード
 			DispatcherHelper.UIDispatcher = Dispatcher;
 
