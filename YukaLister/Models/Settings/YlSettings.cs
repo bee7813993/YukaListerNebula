@@ -132,6 +132,12 @@ namespace YukaLister.Models.Settings
 		// 新着情報を確認するかどうか
 		public Boolean CheckRss { get; set; } = true;
 
+		// Everything 動作時の警告を表示しない
+		public Boolean SuppressEverythingWarning { get; set; }
+
+		// ownCloud 動作時の警告を表示しない
+		public Boolean SuppressOwnCloudWarning { get; set; }
+
 		// --------------------------------------------------------------------
 		// 楽曲情報データベース
 		// --------------------------------------------------------------------

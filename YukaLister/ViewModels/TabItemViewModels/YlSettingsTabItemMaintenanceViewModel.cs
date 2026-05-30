@@ -55,6 +55,22 @@ namespace YukaLister.ViewModels.TabItemViewModels
 		// View 通信用のプロパティー
 		// --------------------------------------------------------------------
 
+		// Everything 動作時の警告を表示しない
+		private Boolean _suppressEverythingWarning;
+		public Boolean SuppressEverythingWarning
+		{
+			get => _suppressEverythingWarning;
+			set => RaisePropertyChangedIfSet(ref _suppressEverythingWarning, value);
+		}
+
+		// ownCloud 動作時の警告を表示しない
+		private Boolean _suppressOwnCloudWarning;
+		public Boolean SuppressOwnCloudWarning
+		{
+			get => _suppressOwnCloudWarning;
+			set => RaisePropertyChangedIfSet(ref _suppressOwnCloudWarning, value);
+		}
+
 		// ゆかりすたーの最新情報・更新版を自動的に確認する
 		private Boolean _checkRss;
 		public Boolean CheckRss
@@ -241,6 +257,8 @@ namespace YukaLister.ViewModels.TabItemViewModels
 		// --------------------------------------------------------------------
 		public override void PropertiesToSettings(YlSettings destSettings)
 		{
+			destSettings.SuppressEverythingWarning = SuppressEverythingWarning;
+			destSettings.SuppressOwnCloudWarning = SuppressOwnCloudWarning;
 			destSettings.CheckRss = CheckRss;
 		}
 
@@ -249,6 +267,8 @@ namespace YukaLister.ViewModels.TabItemViewModels
 		// --------------------------------------------------------------------
 		public override void SettingsToProperties(YlSettings srcSettings)
 		{
+			SuppressEverythingWarning = srcSettings.SuppressEverythingWarning;
+			SuppressOwnCloudWarning = srcSettings.SuppressOwnCloudWarning;
 			CheckRss = srcSettings.CheckRss;
 		}
 

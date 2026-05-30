@@ -392,14 +392,20 @@ namespace YukaLister.Models.YukaListerCores
 			// 存在を検知したら出す警告
 			if (!_ownCloudWarned && instanceName.Contains(INSTANCE_NAME_OWNCLOUD, StringComparison.OrdinalIgnoreCase))
 			{
-				YlModel.Instance.EnvModel.NebulaCoreErrors.Enqueue("ownCloud が動作しています。\n\n"
-						+ "ゆかり・" + YlConstants.APP_NAME_J + "動作中は ownCloud を終了することを推奨します。");
+				if (!YlModel.Instance.EnvModel.YlSettings.SuppressOwnCloudWarning)
+				{
+					YlModel.Instance.EnvModel.NebulaCoreErrors.Enqueue("ownCloud が動作しています。\n\n"
+							+ "ゆかり・" + YlConstants.APP_NAME_J + "動作中は ownCloud を終了することを推奨します。");
+				}
 				_ownCloudWarned = true;
 			}
 			if (!_everythingWarned && instanceName.Contains(INSTANCE_NAME_EVERYTHING, StringComparison.OrdinalIgnoreCase))
 			{
-				YlModel.Instance.EnvModel.NebulaCoreErrors.Enqueue("Everything が動作しています。\n\n"
-						+ "ゆかりの動作に Everything は不要となりましたので、Everything をアンインストールすることを推奨します。");
+				if (!YlModel.Instance.EnvModel.YlSettings.SuppressEverythingWarning)
+				{
+					YlModel.Instance.EnvModel.NebulaCoreErrors.Enqueue("Everything が動作しています。\n\n"
+							+ "ゆかりの動作に Everything は不要となりましたので、Everything をアンインストールすることを推奨します。");
+				}
 				_everythingWarned = true;
 			}
 
